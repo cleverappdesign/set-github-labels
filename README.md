@@ -55,3 +55,6 @@ X-GitHub-Request-Id: EBD9:20FD1:E7DC00:1E8E11E:59E03651
   "default": false
 }
 ```
+
+## Read More
+https://developer.github.com/v3/issues/labels/
