@@ -3,10 +3,10 @@ echo 'This script will remove the GitHub default labels and create the 80|20 pro
 TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN
 
 echo ''
-echo -n 'GitHub Repo Name (e.g. cl0000-cb00-project-name ): '
+echo -n 'GitHub Repo Name: '
 read REPO
 
-REPO_USER='cleverbanana'
+REPO_USER=$GITHUB_USERNAME
 REPO_NAME=$REPO
 
 # Delete default labels
@@ -30,3 +30,8 @@ curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"bug","col
 curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"update","color":"c5def5"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
 curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"enhancement","color":"c2e0c6"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
 curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"integration","color":"d4c5f9"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+
+#create priority labels
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"p1","color":"0029AC"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"p2","color":"2C50C4"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"p3","color":"5B78D5"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
