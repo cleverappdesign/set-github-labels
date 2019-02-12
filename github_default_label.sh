@@ -1,6 +1,6 @@
 echo ''
 echo 'This script will remove the GitHub default labels and create the 80|20 process labels for your repo. A personal access token is required to access private repos.'
-TOKEN=$GITHUB_API_TOKEN
+TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN
 
 echo ''
 echo -n 'GitHub Repo Name: '

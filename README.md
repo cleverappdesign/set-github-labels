@@ -1,14 +1,16 @@
-# CB Github Default Label
+# Set Github Label
 Run this script to create update the default label for the repo.
 
 ## Instructions
 ### Step 1.
 Create a Personal Access Token follow [this instruction!](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 ### Step 2.
-Add your Personal Access Token in your `.bash_profil`.
+Add your API token and your Github username in your `.bash_profil`.
 It should look like this:
-```#GitHub Personal Access Token for Label
+```
+#GitHub Personal Access Token & Username for label generation
 export GITHUB_PERSONAL_ACCESS_TOKEN="YOUR_TOKEN_HERE";
+export GITHUB_USERNAME="hsusyh"
 ```
 
 ### Step 3.
@@ -18,10 +20,11 @@ Run the script on your terminal:
 `./PATH_TO_YOUR_SCRIPT/github_default_label.sh`
 ### Step 5.
 Follow the instruction, type in your repo name. For example: 
-> cl0000-cb19-github-default-label
+> set-github-label
 
 If it is successful, you will see somthing like this on your terminal
-```HTTP/1.1 201 Created
+```
+HTTP/1.1 201 Created
 Server: GitHub.com
 Date: Fri, 13 Oct 2017 03:43:13 GMT
 Content-Type: application/json; charset=utf-8
@@ -49,7 +52,7 @@ X-GitHub-Request-Id: EBD9:20FD1:E7DC00:1E8E11E:59E03651
 
 {
   "id": 718530842,
-  "url": "https://api.github.com/repos/cleverbanana/test123/labels/backlog",
+  "url": "https://api.github.com/repos/username/reponame/labels/backlog",
   "name": "backlog",
   "color": "333333",
   "default": false
